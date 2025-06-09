@@ -1,0 +1,142 @@
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    Salary DECIMAL(10,2),
+    DepartmentID INT,
+    DateOfJoining DATE
+);
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100)
+);
+
+CREATE TABLE Projects (
+    ProjectID INT PRIMARY KEY,
+    ProjectName VARCHAR(100),
+    StartDate DATE,
+    EndDate DATE
+);
+
+CREATE TABLE EmployeeProjects (
+    EmployeeID INT,
+    ProjectID INT,
+    HoursWorked INT,
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+    FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+);
+
+
+--------------------------------
+Get the full name of all employees using CONCAT().
+
+Extract the year from the DateOfJoining for each employee.
+
+Return the length of each employee's email address.
+
+Show salaries rounded to the nearest whole number using ROUND().
+
+Convert all department names to uppercase using UPPER().
+
+Return only the first 3 characters of each employee's first name using LEFT().
+
+Replace ‘@’ with ‘#’ in email addresses using REPLACE().
+
+Get the day name of each employee's DateOfJoining using DATENAME().
+
+Add 6 months to the DateOfJoining for each employee using DATEADD().
+
+Calculate the difference in days between today and each employee’s joining date using DATEDIFF().
+
+Use ISNULL() to replace any NULL salary with 0.
+
+Format the salary with commas using FORMAT().
+
+Get the ASCII value of the first letter of each first name.
+
+Use SUBSTRING() to extract domain name from email.
+
+Count the number of characters (excluding spaces) in full name.
+
+Show the employees whose names start with ‘A’ using LIKE with functions.
+
+Pad employee ID with leading zeroes to make them 5-digit using RIGHT() and REPLICATE().
+
+Convert FirstName to Proper Case using string functions.
+
+Truncate salaries to 1 decimal using ROUND() and CAST().
+
+Convert DateOfJoining to format ‘DD-MM-YYYY’.
+
+Get the number of employees in each department using COUNT() and GROUP BY.
+
+Calculate average salary using AVG().
+
+Find the highest and lowest salaries using MAX() and MIN().
+
+Display total salary paid in each department using SUM() and GROUP BY.
+
+Find the number of employees who joined in each year.
+
+Get all departments with less than 5 employees.
+
+Find total hours worked by each employee using aggregation.
+
+Show the number of employees assigned to each project.
+
+Find employees who have not worked on any project using LEFT JOIN and IS NULL.
+
+Show projects that started in the last 60 days using DATEDIFF().
+
+Create a column that shows whether an employee’s salary is above or below average.
+
+List employees with names longer than 10 characters.
+
+Show employee ID, name, and a note saying "High Earner" if salary > 100000, else "Normal".
+
+Extract and list month names from StartDate of projects.
+
+Count the number of distinct departments.
+
+Show employees who joined on a weekend.
+
+Rank employees by salary using DENSE_RANK().
+
+Use COALESCE() to handle nulls in multiple columns.
+
+Show average hours worked per employee per project.
+
+Find employees who have worked more than 100 hours on any project.
+
+Create a report showing each department's average salary and the percentage of each employee’s salary to that average.
+
+Generate an email alias like firstname.lastname@company.com using string functions.
+
+For each employee, calculate the total number of working days since they joined (excluding weekends).
+
+Write a query to find employees who have worked on all projects.
+
+Get top 3 highest paid employees in each department using ROW_NUMBER().
+
+Generate a formatted string like:
+"John Smith works in IT department and joined on 12-Jan-2021" using concatenation and formatting.
+
+Find departments where average salary is more than overall average salary using subqueries.
+
+Show employees who haven’t worked on any project in the last 30 days using date and join logic.
+
+Create a summary table that shows for each department:
+
+Total employees
+
+Average salary
+
+Earliest joining date
+
+Total projects involved (via employees)
+
+Generate a pipe-delimited string of project names for each employee like:
+John: ProjectA | ProjectB | ProjectC

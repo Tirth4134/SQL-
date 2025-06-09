@@ -1,0 +1,77 @@
+ SCHEMA
+Table: Employees
+Column Name	Data Type
+EmployeeID	INT (PK)
+Name	VARCHAR(100)
+DepartmentID	INT
+Salary	DECIMAL(10, 2)
+JoinDate	DATE
+
+Table: Departments
+Column Name	Data Type
+DepartmentID	INT (PK)
+DepartmentName	VARCHAR(100)
+
+
+### 🔹 DISTINCT (Questions 1–15)
+
+1. Retrieve all distinct department IDs from the Employees table.
+2. List all distinct salaries in the Employees table.
+3. How many distinct departments have employees?
+4. Find distinct joining years of employees.
+5. List all distinct combinations of DepartmentID and Salary.
+6. Count the number of distinct employee names.
+7. Get all distinct names of employees who joined after 2020.
+8. List all distinct employee IDs that belong to department 3.
+9. Retrieve distinct salary values greater than 50,000.
+10. List distinct departments from Employees who joined before 2022.
+11. Get the number of distinct JoinDates.
+12. Show distinct salaries in ascending order.
+13. Retrieve all distinct employee names having salary above 30,000.
+14. Count distinct DepartmentIDs where salary is more than average.
+15. List distinct employee names and their corresponding join dates.
+
+---
+
+### 🔹 CAST (Questions 16–30)
+
+16. Show all employee salaries casted as integers.
+17. Convert JoinDate of employees into VARCHAR.
+18. Show salaries divided by 1000 and cast to VARCHAR.
+19. Cast EmployeeID to CHAR and display along with name.
+20. Cast decimal salary to integer for employees in department 5.
+21. Convert join date to a string format and show year only.
+22. Cast salary to FLOAT and display for each employee.
+23. Display employee name and salary with salary casted to VARCHAR.
+24. Cast JoinDate to DATETIME and add 1 day.
+25. Cast the average salary to an INT.
+26. Cast NULL salaries to 0 using CAST.
+27. Show all employee names where salary casted to INT is less than 50000.
+28. Cast JoinDate to TIME (if supported).
+29. Display salaries rounded to nearest integer using CAST.
+30. Cast employee count to VARCHAR.
+
+---
+
+### 🔹 Nested Queries (Questions 31–50)
+
+31. Find employees who earn more than the average salary.
+32. List employees who work in the 'HR' department.
+33. Retrieve departments that do not have any employees.
+34. Get names of employees with the maximum salary.
+35. List employees who joined on the same date as any other employee.
+36. Show employees whose salary equals the second highest salary.
+37. List department names where at least one employee earns more than 100000.
+38. Get names of employees who earn more than all employees in department 2.
+39. Find employees working in the same department as 'John'.
+40. Show employees who do not work in any department listed in Departments table.
+41. List employees whose department name starts with 'S'.
+42. Retrieve names of departments with more than 5 employees.
+43. Find names of employees earning the least salary.
+44. List departments having average salary more than 70,000.
+45. Get employees who joined after the average JoinDate.
+46. Show employees who have the same salary as any employee in department 1.
+47. List employee names who joined before any employee in 'Finance'.
+48. Find departments that have at least one employee with salary < 30,000.
+49. Show names of employees who do not have the highest salary in their department.
+50. Find employees who earn more than the average salary in their own department.
